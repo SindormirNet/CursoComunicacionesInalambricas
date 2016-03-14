@@ -10,11 +10,12 @@ void setup() {
 }
 
 void loop() {
-  uint8_t msg[MAX_MSG_LEN];
-  uint8_t len = sizeof(msg);
+  char msg[MAX_MSG_LEN];
+  byte len = sizeof(msg);
 
-  if (receptor.recv(msg, &len)) {
+  if (receptor.recv( (uint8_t*) msg, (uint8_t*) &len)) {
     for (byte i = 0; i < len; i++)
-      Serial.println((char*) msg);
+      Serial.print(msg[i]);
+    Serial.println();
   }
 } 
