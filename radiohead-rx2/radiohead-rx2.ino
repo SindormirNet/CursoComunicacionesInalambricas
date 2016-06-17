@@ -1,5 +1,4 @@
 #include <RH_ASK.h>
-#include <SPI.h>
 #define MAX_MSG_LEN 59
 
 RH_ASK receptor = RH_ASK(2000, 11, 12, 10, false);
@@ -10,7 +9,7 @@ void setup() {
 }
 
 void loop() {
-  char msg[MAX_MSG_LEN];
+  char msg[MAX_MSG_LEN+1];
   byte len = sizeof(msg);
 
   if (receptor.recv( (uint8_t*) msg, (uint8_t*) &len)) {
