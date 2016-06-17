@@ -1,4 +1,3 @@
-#include <SPI.h> 
 #include <RH_ASK.h>
 #define MAX_MSG_LEN 59
 
