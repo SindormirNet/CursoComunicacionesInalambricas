@@ -16,9 +16,9 @@ void loop(){
       Serial.println(trama.value,HEX);
     }
     else{
-      Serial.print("Error: ");
+      Serial.print("Mando tipo: ");
       Serial.print(trama.decode_type);
-      Serial.print(" ");
+      Serial.print(" ha enviado ");
       Serial.println(trama.value,HEX);
     }
     receptorIR.resume();
