@@ -1,4 +1,3 @@
-#include <SPI.h> 
 #include <RH_ASK.h>
 #define MAX_MSG_LEN 59
 
@@ -15,7 +14,7 @@ void loop() {
   static char msg[MAX_MSG_LEN+1];
   
   if(Serial.available()) {
-    if (i > MAX_MSG_LEN){
+    if (i > MAX_MSG_LEN-1){
       Serial.println("Mensaje demasiado largo. Descartando...");
       i=0;
     }
