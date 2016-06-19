@@ -10,11 +10,11 @@ void setup() {
 }
 
 void loop() {
-  fs1000a.send((uint8_t *)”A”, 2);
+  fs1000a.send((uint8_t *)"A", 2);
   fs1000a.waitPacketSent();
   delay(500);
 
-  fs1000a.send((uint8_t *)”B”, 2);
+  fs1000a.send((uint8_t *)"B", 2);
   fs1000a.waitPacketSent();
   delay(500);
 }
