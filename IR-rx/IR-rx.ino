@@ -11,7 +11,7 @@ void setup() {
 
 void loop(){
   if (receptorIR .decode(&trama)) {
-    if (trama.decode_type==1){
+    if (trama.decode_type==3){
       Serial.print("Ha llegado: ");
       Serial.println(trama.value,HEX);
     }
